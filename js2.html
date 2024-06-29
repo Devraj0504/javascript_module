@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAVASCRIPT</title>
+</head>
+
+<body>
+    <h1 id="para">welcome to JAVASCRIPT</h1>
+
+    <input type="text" id="num1" placeholder="Enter first number FOR CHECKIN PRIME">
+    <br>
+    <button onclick="get_prime()">Submit</button>
+    <p id="display"></p>
+    <!-- <form action="">
+        <input type="text" id="num1" placeholder="Enter first number">
+        <br>
+        <input type="text" id="num2" placeholder="Enter second number"><br>
+        
+        <button onclick="get_input()">submit</button>
+        <br>
+        Value = <p id="display"></p>
+    </form> -->
+
+    <script>
+        // write a program to take two input from user from an html input element and perform 
+
+        // function get_input()
+        // {
+        //     let x=parseFloat(document.getElementById("num1").value);
+        //     let y=parseFloat(document.getElementById("num2").value);
+        //     let add=x+y;
+        //     // document.getElementById("display").innerHTML=add;
+        //     document.write("<br> ADD",add);
+
+        //     let mul=x*y;
+        //     document.write("<br> SUB",mul);
+        //     let div=x/y;
+        //     document.write("<br>",div);
+        //     let sub=x-y;
+        //     document.write("<br>",sub);
+        //     document.getElementById("display").innerHTML=mul;
+        // }
+
+        function get_prime() {
+            // WAP TO CHECK GIVEN INPUT IS A PRIME OR NOT USING WHILE LOOP
+
+            var x = parseInt(document.getElementById("num1").value);
+            var i = 1;
+            var c = 0;
+            data = " ";
+            while (i <= x) {
+                data += i + "<br>";
+                if (x % i == 0) {
+                    c = c + 1;
+                }
+                i = i + 1;
+            }
+            if (c == 2) {
+                document.write("<br> Number is prime ", x);
+            }
+            else {
+                document.write("<br> Number is not prime ", x);
+            }
+            document.getElementById("display").innerHTML = data;
+
+        }
+
+    </script>
+</body>
+
+</html>

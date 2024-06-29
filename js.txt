@@ -1,0 +1,20 @@
+while loop
+do while loop
+for loop
+for-in loop
+for-off loop
+for-each loop
+
+*---------Conditional satatement in js----------*
+
+logical op in js
+logical AND OP
+logical OR OP
+
+*----------FUNCTION IN JS------------*
+
+for defining function in js we use function keyword
+1.no return no arg
+2.no return with arg
+3.return with arg
+4.return with no arg

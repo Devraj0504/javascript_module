@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- WAP TO FIND FACTORIAL OF A NUM INPUT TAKEN FROM USER -->
+    <!-- WAP TO FIND SUM OF FACTORIAL OF A NUM INPUT TAKEN FROM USER -->
+    <!-- WAP TO FIND !1/1-!2/2+!3/3-!4/4 ...........  -->
+    <!-- 0,1,1,2,3,5,8 ............. -->
+    <!-- LCM AND HCF INPUT TAKEN FROM USER  -->
+    <!-- 0,1,2,4,7,11,16 .............. -->
+
+
+    <div class="ashoka">
+         <p class="l1"></p>
+         <p class="l2"></p>
+         <p class="l3"></p>
+         <p class="l4"></p>
+         <p class="l5"></p>
+         <p class="l6"></p>
+         <p class="l7"></p>
+         <p class="l8"></p>
+         <p class="l9"></p>
+         <p class="l10"></p>
+         <p class="l11"></p>
+         <p class="l12"></p>         
+    </div>
+    <h1 id="para">welcome to JAVASCRIPT</h1>
+
+    <input type="text" id="num1" placeholder="Enter number">
+    <br>
+    <button onclick="get_factor()">Total Factors</button>
+    <button onclick="get_fact()">Factorial</button>
+    <h3>1. FIND --  !1/1-!2/2+!3/3-!4/4 ...........</h3>
+    
+    <h3>2. FIND --  0,1,1,2,3,5,8 .............  </h3>
+    <input type="text" id="num2" placeholder="Enter number">
+    <br>
+    <button onclick="get_series()">Answer series 1</button>
+    <button onclick="get_series2()">Answer series 2</button>
+    <h2 id="factor"></h2>
+    <h3 id="factorial"></h3>
+    <h4 id="series"></h4>
+    <h4 id="series2"></h4>
+
+
+
+
+
+    <script>
+        function get_factor() {
+            var x = parseInt(document.getElementById("num1").value);
+            var i = 1;
+            var c = 0;
+            data = "Factors are ";
+            while (i <= x) {
+
+                if (x % i == 0) {
+                    c = c + 1;
+                    data += i + "  ";
+                }
+                i = i + 1;
+            }
+            data += "<br> Total Factors of number " + x + " is " + c;
+            document.getElementById("factor").innerHTML = data;
+
+        }
+
+
+        function get_fact() {
+            var x = parseInt(document.getElementById("num1").value);
+            var i = 1;
+            var fac = 1;
+            var data = " ";
+            var sum = 0;
+            while (i <= x) {
+                fac *= i;
+                i = i + 1;
+                sum += fac;
+            }
+            data += "<br> Factorial of number " + x + " is " + fac;
+            data += "<br> Sum of Factorial is " + sum;
+
+            document.getElementById("factorial").innerHTML = data;
+        }
+
+        function get_series() {
+            // <!-- WAP TO FIND !1/1-!2/2+!3/3-!4/4 ...........  -->
+            data=" ";
+            var x = parseInt(document.getElementById("num2").value);
+            var i = 1;
+            sum = 0;
+            while (i <= x) {
+                val = 1;
+                fac = 1;
+                var j = 1;
+                while (j <= i) {
+                    fac *= j;
+                    j = j + 1;
+                }
+                val=fac/i;
+                if (i % 2 == 0) {
+                    sum -= val;
+                }
+                else{
+                    sum+=val;
+                }
+                i=i+1;
+            }
+            data+=" Answer of this series 1 is "+sum;
+            document.getElementById("series").innerHTML=data;
+
+        }
+
+        function get_series2()
+        {
+    // <!-- 0,1,1,2,3,5,8 ............. -->
+
+            var data=" ";
+            var x=parseInt(document.getElementById("num2").value);
+            var a=0;
+            var b=1;
+            var sum=-1;
+            var i=0;
+            while(i<x){
+                sum=a+b;
+                a=b;
+                b=sum;
+                i=i+1;
+            data+=" Answer of this series 2 is "+sum;
+
+            }
+            data+=" Answer of this series 2 is "+sum;
+            document.getElementById("series2").innerHTML=data;
+
+        }
+    </script>
+</body>
+
+</html>
