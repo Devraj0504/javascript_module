@@ -1,0 +1,16 @@
+body{
+    height: 100vh;
+    background: linear-gradient(blue,skyblue);
+   
+}
+#main{
+    width: 50%;
+    height: auto;
+    align-content: center;
+    background-color: aquamarine;
+    position: absolute;
+}
+
+ h3{
+    background-color: antiquewhite;
+ }
